@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/00e71096db.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- =======Header======= -->
+    <!-- <div class="header">
+        <nav id="navBar" class="nav container">
+            <a href="index.html" class="logo">Rift-Hazari <span clasa>protlofio</span></a>
+            
+        <div class="nav-men">
+            <ul class="ul">
+                <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Skills</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
+        </div>
+        </nav>
+    </div> -->
+
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="logo">
+                    <a href="#">RIFAT</a>
+                </div>
+                <button type="button" class="nav_toggler">
+                    <span></span>
+                </button>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Skills</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- =========form=========== -->
+
+    <section id="contact" class="container contact_from">
+        <div class="contact_text">
+            <h1>Let's Chat.</h1>
+            <h1>Tell me about your project.</h1>
+            <h4>Let's create something together 🤟</h4>
+        </div>
+        <form action="/">
+            <h1>Send us a message🚀</h1>
+            <div class="input_box">
+                <input type="text" name="name" placeholder="Full Name" required>
+            </div>
+            <div class="input_box">
+                <input type="email" name="Email" placeholder="rifathazari05@gmai.com" required>
+            </div>
+            <div class="input_box textarea_box">
+               <textarea name="message" placeholder="your message here..." cols="30" rows="10" required spellcheck="false"></textarea>
+            </div>
+            <button class="sen btn b-btn">Send Now</button>
+        </form>
+    </section>
+
+    <!-- =========footer====== -->
+    <section class="container footer foot">
+        <div class="top_footer">
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+        <div class="top_footer text">
+            <p> copyright©❤️ by Rifathazari</p>
+        </div>
+    </section>
+
+    <script>
+        var navBar = document.getElementById("navBar");
+
+   function togglebtn(){
+       navBar.classList.toggle("var_height");
+   }
+
+    const navToggler = document.querySelector(".nav_toggler");
+    navToggler.addEventListener("click", navToggle);
+
+    function navToggle() {
+        navToggler.classList.toggle("active");
+        const nav = document.querySelector(".nav");
+        nav.classList.toggle("open")
+        if(nav.classList.contains("open")){
+            nav.style.maxHeight = nav.scrollHeight + "px";
+        }
+        else{
+            nav.removeAttribute("style");
+        }
+    }
+   </script>
+</body>
+</html>
